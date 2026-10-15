@@ -8,9 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap">
 <style>
-/* ==========================================
-   LIQUID GLASS DESIGN SYSTEM (macOS/iOS Style)
-   ========================================== */
+
 :root {
   color-scheme: light;
   --bg: #F4F7FC;
@@ -142,7 +140,7 @@ sub { font-size: .72em; line-height: 0; }
 button { font: inherit; cursor: pointer; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
 
-/* Header & Top Bar */
+
 header.top { padding-block: 36px 20px; }
 .eyebrow { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 header.top h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-top: 6px; }
@@ -156,7 +154,7 @@ header.top h1 .lesson { color: var(--accent); text-shadow: 0 0 20px var(--accent
 }
 .law .eq { color: var(--accent); font-weight: 700; }
 
-/* Tabs */
+
 nav.tabs {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
   background: var(--surface);
@@ -177,7 +175,7 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-colo
 main { padding-block: 28px 60px; }
 section.panel { display: grid; gap: 24px; }
 
-/* Cards (Liquid Glass Effect) */
+
 .card {
   background: var(--surface);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -227,7 +225,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .tag.th { background: var(--amber-soft); color: var(--amber); }
 .tag.vd { background: var(--bad-soft); color: var(--bad); }
 
-/* Molecules */
+
 .react { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; padding: 10px 0; }
 .mol { display: inline-flex; align-items: center; }
 .atom {
@@ -243,7 +241,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .counts { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; font-size: .95rem; color: var(--muted); }
 .counts b { color: var(--ink); }
 
-/* Buttons */
+
 .btn {
   border: var(--glass-border);
   background: var(--surface);
@@ -281,7 +279,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
   box-shadow: 0 6px 16px var(--accent-soft);
 }
 
-/* Lab */
+
 .lab svg { width: 100%; height: auto; max-width: 560px; display: block; margin: 0 auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05)); }
 .result { border-radius: 14px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--line-solid); }
 .result.show { background: var(--good-soft); border-color: var(--good); color: var(--good); }
@@ -290,7 +288,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .bub { animation: rise 1.6s ease-in infinite; }
 .bubin { animation: risein 1.4s ease-in infinite; }
 
-/* Balancing */
+
 .eqlist { display: flex; flex-wrap: wrap; gap: 8px; }
 .eqlist button {
   min-width: 44px; border: var(--glass-border); background: var(--surface); color: var(--ink);
@@ -321,7 +319,7 @@ td.no { color: var(--bad); font-weight: 700; }
 .msg.bad { background: var(--bad-soft); color: var(--bad); border: 1px solid var(--bad); }
 .msg.info { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber); }
 
-/* Problems & Quiz */
+
 .prob { display: grid; gap: 12px; padding-block: 16px; border-top: 1px solid var(--line-solid); }
 .prob:first-of-type { border-top: 0; padding-top: 0; }
 .prob input { width: 8em; padding: 10px 12px; border: 1px solid var(--line-solid); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
@@ -355,7 +353,7 @@ details summary { cursor: pointer; font-weight: 600; }
 details p { margin-top: 10px; color: var(--muted); }
 footer { color: var(--muted); font-size: .85rem; padding-block: 20px 40px; text-align: center; }
 
-/* Student Bar */
+
 .student {
   margin-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; align-items: end;
   background: var(--surface);
@@ -388,7 +386,7 @@ footer { color: var(--muted); font-size: .85rem; padding-block: 20px 40px; text-
 .donebtn { justify-self: start; }
 .donebtn.on { background: var(--good-soft); border-color: var(--good); color: var(--good); }
 
-/* Teacher Board */
+
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
 .tile {
   border: var(--glass-border); border-radius: 12px; padding: 14px 16px; background: var(--surface);
@@ -640,7 +638,7 @@ const fmt=f=>f.replace(/(\d+)/g,'<sub>$1</sub>');
 const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-/* ---------- student progress (lưu trên máy học sinh) ---------- */
+
 const KEY='khtn8-b5-progress-v1';
 const blank=()=>({name:'',cls:'',kt:false,lab:[],solved:[],revealed:[],probs:[],quizBest:-1,quizTries:0,quizFirst:-1,probsSeen:[],real:[],min:0,dev:'',rs:0});
 let S=blank();
@@ -672,7 +670,7 @@ let lastAct=Date.now();
 ['click','keydown','input','scroll','touchstart'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
 setInterval(()=>{if(document.visibilityState==='visible'&&Date.now()-lastAct<120000){S.min+=0.5;save();}},30000);
 
-/* ---------- tabs ---------- */
+
 const tabs=[...document.querySelectorAll('[role=tab]')];
 function show(id){
   if(!document.getElementById('p-'+id)||(id==='giaovien'&&document.getElementById('teacherTab').hidden)) id='kienthuc';
@@ -685,12 +683,12 @@ show((location.hash||'').slice(1)||'kienthuc');
 
 document.getElementById('goSubmit').addEventListener('click',()=>{show('nopbai');document.querySelector('nav.tabs').scrollIntoView({behavior:'smooth'});});
 
-/* ---------- molecules ---------- */
+
 const mol=atoms=>'<span class="mol">'+atoms.map(a=>`<span class="atom ${a}">${a}</span>`).join('')+'</span>';
 $('#molBefore').innerHTML=mol(['H','H'])+mol(['H','H'])+'<span class="op">+</span>'+mol(['O','O']);
 $('#molAfter').innerHTML='<span class="op">→</span>'+mol(['H','O','H'])+mol(['H','O','H']);
 
-/* ---------- lab ---------- */
+
 const svg=$('#labSvg');
 const scen={
   A:{start:152.40,end:152.40,res:'Số chỉ của cân <b>không đổi</b> (152,40 g). Xuất hiện kết tủa trắng barium sulfate: BaCl<sub>2</sub> + Na<sub>2</sub>SO<sub>4</sub> → BaSO<sub>4</sub>↓ + 2NaCl. Phản ứng không tạo chất khí nên tổng khối lượng các chất trước và sau phản ứng bằng nhau.'},
@@ -763,7 +761,7 @@ $('#runBtn').addEventListener('click',run);
 $('#resetBtn').addEventListener('click',()=>{if(!running)drawLab(cur)});
 drawLab('A');
 
-/* ---------- balancing ---------- */
+
 function parse(f){let i=0;
   const num=()=>{let s='';while(i<f.length&&/\d/.test(f[i]))s+=f[i++];return s?+s:1};
   const group=()=>{const m={};while(i<f.length){const c=f[i];
@@ -834,7 +832,7 @@ $('#ansBtn').onclick=()=>{const e=EQS[ei];if(!solved.has(ei)&&addOnce(S.revealed
 $('#nextBtn').onclick=()=>{ei=(ei+1)%EQS.length;renderEq();};
 renderEq();
 
-/* ---------- mass problems ---------- */
+
 const PROBS=[
   {lv:'th',q:'Đốt cháy hết 4,8 g magnesium (Mg) trong không khí thu được 8 g magnesium oxide (MgO). Tính khối lượng oxygen đã phản ứng.',u:'g',a:3.2,s:'2Mg + O₂ → 2MgO. Theo định luật: m<sub>Mg</sub> + m<sub>O₂</sub> = m<sub>MgO</sub> ⇒ m<sub>O₂</sub> = 8 − 4,8 = <b>3,2 g</b>.'},
   {lv:'th',q:'Nung 100 kg đá vôi (CaCO₃) thu được 56 kg vôi sống (CaO) và khí carbon dioxide (CO₂). Tính khối lượng CO₂ tạo thành.',u:'kg',a:44,s:'CaCO₃ → CaO + CO₂. m<sub>CO₂</sub> = m<sub>CaCO₃</sub> − m<sub>CaO</sub> = 100 − 56 = <b>44 kg</b>.'},
@@ -856,7 +854,7 @@ $('#probs').addEventListener('click',ev=>{
   else{out.className='msg bad';out.textContent='Chưa đúng. Gợi ý: viết biểu thức tổng khối lượng chất tham gia = tổng khối lượng sản phẩm, rồi tìm đại lượng chưa biết.';}
 });
 
-/* ---------- quiz ---------- */
+
 const Q=[
   {lv:'nb',q:'Nội dung của định luật bảo toàn khối lượng là:',o:['Tổng khối lượng sản phẩm lớn hơn tổng khối lượng chất tham gia.','Tổng khối lượng sản phẩm bằng tổng khối lượng các chất tham gia phản ứng.','Tổng khối lượng sản phẩm nhỏ hơn tổng khối lượng chất tham gia.','Khối lượng mỗi chất không thay đổi trong phản ứng.'],a:1,e:'Trong một phản ứng hóa học, tổng khối lượng các chất sản phẩm bằng tổng khối lượng các chất tham gia.'},
   {lv:'nb',q:'Trong một phản ứng hóa học, yếu tố nào sau đây thay đổi?',o:['Số nguyên tử của mỗi nguyên tố.','Khối lượng của mỗi nguyên tử.','Liên kết giữa các nguyên tử.','Tên các nguyên tố hóa học.'],a:2,e:'Chỉ có liên kết giữa các nguyên tử thay đổi, làm phân tử này biến đổi thành phân tử khác.'},
@@ -904,7 +902,7 @@ $('#submitQuiz').onclick=()=>{
 $('#resetQuiz').onclick=()=>{renderQuiz();$('#quiz').scrollIntoView({behavior:reduce?'auto':'smooth'});};
 renderQuiz();
 
-/* ---------- tiến độ khác ---------- */
+
 const ktBtn=$('#ktDone');
 const paintKt=()=>{ktBtn.classList.toggle('on',S.kt);ktBtn.textContent=S.kt?'✓ Đã học xong phần kiến thức':'Em đã học xong phần kiến thức';};
 ktBtn.onclick=()=>{S.kt=!S.kt;save();paintKt();};paintKt();
@@ -914,7 +912,7 @@ nameIn.value=S.name;clsIn.value=S.cls;
 nameIn.addEventListener('input',()=>{S.name=nameIn.value;save();});
 clsIn.addEventListener('input',()=>{S.cls=clsIn.value.toUpperCase().replace(/\s+/g,'');clsIn.value=S.cls;save();});
 
-/* ---------- mã kết quả ---------- */
+
 const SALT='khtn8|bai5|bao-toan-khoi-luong';
 function fnv(str){let h=0x811c9dc5;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0;}return h.toString(16).padStart(8,'0');}
 const b64e=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
@@ -950,7 +948,7 @@ $('#resetAll').onclick=()=>{
 };
 save();
 
-/* ---------- giáo viên & quy đổi điểm cộng ---------- */
+
 let bonusRules=[{min:90,pts:1},{min:70,pts:0.5}];
 const bonusOf=pc=>{for(const r of [...bonusRules].sort((a,b)=>b.min-a.min))if(pc>=r.min)return r.pts;return 0;};
 const fmtPts=x=>String(Math.round(x*100)/100).replace('.',',');
