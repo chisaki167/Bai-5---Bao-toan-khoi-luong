@@ -8,9 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap">
 <style>
-/* ==========================================
-   LIQUID GLASS DESIGN SYSTEM (macOS/iOS Style)
-   ========================================== */
+
 :root {
   color-scheme: light;
   --bg: #F4F7FC;
@@ -142,7 +140,7 @@ sub { font-size: .72em; line-height: 0; }
 button { font: inherit; cursor: pointer; }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
 
-/* Header & Top Bar */
+
 header.top { padding-block: 36px 20px; }
 .eyebrow { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
 header.top h1 { font-size: clamp(1.8rem, 4.5vw, 2.6rem); margin-top: 6px; }
@@ -156,7 +154,7 @@ header.top h1 .lesson { color: var(--accent); text-shadow: 0 0 20px var(--accent
 }
 .law .eq { color: var(--accent); font-weight: 700; }
 
-/* Tabs */
+
 nav.tabs {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
   background: var(--surface);
@@ -177,7 +175,7 @@ nav.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-colo
 main { padding-block: 28px 60px; }
 section.panel { display: grid; gap: 24px; }
 
-/* Cards (Liquid Glass Effect) */
+
 .card {
   background: var(--surface);
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
@@ -227,7 +225,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .tag.th { background: var(--amber-soft); color: var(--amber); }
 .tag.vd { background: var(--bad-soft); color: var(--bad); }
 
-/* Buttons */
+
 .btn {
   border: var(--glass-border);
   background: var(--surface);
@@ -252,7 +250,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .btn:disabled { opacity: .5; cursor: default; transform: none !important; box-shadow: none !important; }
 .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 
-/* Lesson specific styles */
+
 .ratio { display: grid; gap: 16px; }
 .ratio input[type=range] { width: 100%; accent-color: var(--accent); }
 .rgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; text-align: center; }
@@ -289,7 +287,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .mtable td, .mtable th { border: 1px solid var(--line-solid); padding: 8px 12px; text-align: center; }
 .mtable th { color: var(--muted); font-weight: 600; background: var(--accent-soft); }
 
-/* Balancing & Lists */
+
 .eqlist { display: flex; flex-wrap: wrap; gap: 8px; }
 .eqlist button {
   min-width: 44px; border: var(--glass-border); background: var(--surface); color: var(--ink);
@@ -304,7 +302,7 @@ ul.clean { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
 .msg.bad { background: var(--bad-soft); color: var(--bad); border: 1px solid var(--bad); }
 .msg.info { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber); }
 
-/* Problems & Quiz */
+
 .prob { display: grid; gap: 12px; padding-block: 16px; border-top: 1px solid var(--line-solid); }
 .prob:first-of-type { border-top: 0; padding-top: 0; }
 .prob input { width: 8em; padding: 10px 12px; border: 1px solid var(--line-solid); border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; }
@@ -339,7 +337,7 @@ details summary { cursor: pointer; font-weight: 600; }
 details p { margin-top: 10px; color: var(--muted); }
 footer { color: var(--muted); font-size: .85rem; padding-block: 20px 40px; text-align: center; }
 
-/* Student Bar */
+
 .student {
   margin-top: 20px; display: flex; flex-wrap: wrap; gap: 16px; align-items: end;
   background: var(--surface);
@@ -372,7 +370,7 @@ footer { color: var(--muted); font-size: .85rem; padding-block: 20px 40px; text-
 .donebtn { justify-self: start; }
 .donebtn.on { background: var(--good-soft); border-color: var(--good); color: var(--good); }
 
-/* Teacher Board */
+
 .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
 .tile {
   border: var(--glass-border); border-radius: 12px; padding: 14px 16px; background: var(--surface);
@@ -648,7 +646,7 @@ const vn=(x,d)=>{let s=(Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toString();
 const num=s=>parseFloat(String(s).trim().replace(',','.'));
 const near=(v,a)=>Math.abs(v-a)<=Math.max(0.006,Math.abs(a)*0.005);
 
-/* ---------- tiến độ ---------- */
+
 const KEY='khtn8-b6-progress-v1';
 const blank=()=>({name:'',cls:'',kt:false,guided:[],drill:0,probs:[],quizBest:-1,quizTries:0,quizFirst:-1,probsSeen:[],real:[],min:0,dev:'',rs:0});
 let S=blank();
@@ -677,7 +675,7 @@ let lastAct=Date.now();
 ['click','keydown','input','scroll','touchstart'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
 setInterval(()=>{if(document.visibilityState==='visible'&&Date.now()-lastAct<120000){S.min+=0.5;save();}},30000);
 
-/* ---------- tabs ---------- */
+
 const tabs=[...document.querySelectorAll('[role=tab]')];
 function show(id){
   if(!document.getElementById('p-'+id)||(id==='giaovien'&&$('#teacherTab').hidden)) id='kienthuc';
@@ -689,7 +687,7 @@ tabs.forEach(t=>t.addEventListener('click',()=>{show(t.dataset.tab);window.scrol
 show((location.hash||'').slice(1)||'kienthuc');
 $('#goSubmit').addEventListener('click',()=>{show('nopbai');document.querySelector('nav.tabs').scrollIntoView({behavior:reduce?'auto':'smooth'});});
 
-/* ---------- tỉ lệ mol ---------- */
+
 function ratio(){const n=+$('#alRange').value/10;
   $('#alVal').textContent=vn(n,1);
   const o=n*3/4,p=n/2;
@@ -698,7 +696,7 @@ function ratio(){const n=+$('#alRange').value/10;
   $('#rAl2O3').textContent=vn(p,3)+' mol';$('#mAl2O3').textContent=vn(p*102,3)+' g';}
 $('#alRange').addEventListener('input',ratio);ratio();
 
-/* ---------- giải từng bước ---------- */
+
 const G=[
   {t:'Cho 6,5 g zinc (Zn) tác dụng hết với dung dịch hydrochloric acid. Tính khối lượng zinc chloride (ZnCl₂) tạo thành.',eq:'Zn + 2HCl → ZnCl<sub>2</sub> + H<sub>2</sub>',
    s:[{l:'Bước 2: Tính số mol Zn.',a:0.1,u:'mol',h:'n = m : M = 6,5 : 65'},
@@ -744,7 +742,7 @@ $('#gSteps').addEventListener('click',ev=>{
 $('#gNext').onclick=()=>{gi=(gi+1)%G.length;gstep=0;renderG();};
 renderG();
 
-/* ---------- luyện công thức ---------- */
+
 const SUB=f=>f.replace(/(\d+)/g,'<sub>$1</sub>');
 const SOLIDS=[['H2O',18,'nước'],['NaCl',58.5,'sodium chloride'],['CaCO3',100,'calcium carbonate'],['Fe',56,'iron'],['Cu',64,'copper'],['Al',27,'aluminium'],['Mg',24,'magnesium'],['Zn',65,'zinc'],['NaOH',40,'sodium hydroxide'],['H2SO4',98,'sulfuric acid'],['CuO',80,'copper(II) oxide'],['MgO',40,'magnesium oxide']];
 const GASES=[['O2',32,'oxygen'],['H2',2,'hydrogen'],['CO2',44,'carbon dioxide'],['N2',28,'nitrogen'],['CH4',16,'methane']];
@@ -773,7 +771,7 @@ $('#drillHint').onclick=()=>drillMsg('Gợi ý: '+D.h,'info');
 $('#drillNew').onclick=newDrill;
 newDrill();paintDrill();
 
-/* ---------- bài tập vận dụng ---------- */
+
 const PROBS=[
   {lv:'th',q:'Cho 2,7 g aluminium tác dụng với dung dịch hydrochloric acid dư: 2Al + 6HCl → 2AlCl₃ + 3H₂. Tính thể tích khí hydrogen thu được ở đkc.',u:'L',a:3.7185,s:'n<sub>Al</sub> = 2,7 : 27 = 0,1 mol ⇒ n<sub>H₂</sub> = 0,1 × 3 : 2 = 0,15 mol ⇒ V = 0,15 × 24,79 = <b>3,72 L</b>.'},
   {lv:'th',q:'Đốt cháy hoàn toàn 3,2 g sulfur trong oxygen: S + O₂ → SO₂. Tính khối lượng sulfur dioxide tạo thành.',u:'g',a:6.4,s:'n<sub>S</sub> = 3,2 : 32 = 0,1 mol ⇒ n<sub>SO₂</sub> = 0,1 mol ⇒ m = 0,1 × 64 = <b>6,4 g</b>.'},
@@ -796,7 +794,7 @@ $('#probs').addEventListener('click',ev=>{
   else{out.className='msg bad';out.textContent='Chưa đúng. Gợi ý: làm theo 4 bước, chú ý tỉ lệ hệ số trong PTHH.';}
 });
 
-/* ---------- trắc nghiệm ---------- */
+
 const Q=[
   {lv:'nb',q:'Công thức tính số mol chất khi biết khối lượng là:',o:['n = m × M','n = M : m','n = m : M','n = m + M'],a:2,e:'n = m : M, trong đó m là khối lượng (g), M là khối lượng mol (g/mol).'},
   {lv:'nb',q:'Ở điều kiện chuẩn (25 °C, 1 bar), 1 mol khí bất kì chiếm thể tích là:',o:['22,4 L','24,79 L','24 L','1 L'],a:1,e:'Thể tích mol khí ở đkc là 24,79 L/mol.'},
@@ -844,7 +842,7 @@ $('#submitQuiz').onclick=()=>{
 $('#resetQuiz').onclick=()=>{renderQuiz();$('#quiz').scrollIntoView({behavior:reduce?'auto':'smooth'});};
 renderQuiz();
 
-/* ---------- mốc tiến độ khác ---------- */
+
 const ktBtn=$('#ktDone');
 const paintKt=()=>{ktBtn.classList.toggle('on',S.kt);ktBtn.textContent=S.kt?'✓ Đã học xong phần kiến thức':'Em đã học xong phần kiến thức';};
 ktBtn.onclick=()=>{S.kt=!S.kt;save();paintKt();};paintKt();
@@ -854,7 +852,7 @@ nameIn.value=S.name;clsIn.value=S.cls;
 nameIn.addEventListener('input',()=>{S.name=nameIn.value;save();});
 clsIn.addEventListener('input',()=>{S.cls=clsIn.value.toUpperCase().replace(/\s+/g,'');clsIn.value=S.cls;save();});
 
-/* ---------- mã kết quả ---------- */
+
 const PREFIX='KHTN8B6',SALT='khtn8|bai6|tinh-theo-pthh';
 function fnv(str){let h=0x811c9dc5;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0;}return h.toString(16).padStart(8,'0');}
 const b64e=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
@@ -890,7 +888,7 @@ $('#resetAll').onclick=()=>{
 };
 save();
 
-/* ---------- bảng giáo viên & quy đổi điểm cộng ---------- */
+
 let bonusRules=[{min:90,pts:1},{min:70,pts:0.5}];
 const bonusOf=pc=>{for(const r of [...bonusRules].sort((a,b)=>b.min-a.min))if(pc>=r.min)return r.pts;return 0;};
 const fmtPts=x=>String(Math.round(x*100)/100).replace('.',',');
